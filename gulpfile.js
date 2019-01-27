@@ -69,4 +69,4 @@ gulp.task('watch', function() {
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
 	gulp.watch('app/*.html', gulp.parallel('code'))
 });
-gulp.task('default', gulp.parallel('watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
